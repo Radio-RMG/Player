@@ -1,21 +1,51 @@
-console.log('script player.js bien chargé');
+console.log('script player.js bien chargé')
 
-let lecteur = document.getElementById('lecteur');
+let lecteur = $('#lecteur')[0]
+let play    = $('#play')
+let pause    = $('#pause')
+let plus    = $('#plus')
+let moins   = $('#moins')
 
-player = {
-    play: function () {
-        lecteur.play();
+let player = {
+    init: () => {
+        player.refresh()
+        player.play()
+        player.pause()
+        player.volumePlus()
+        player.volumeMoins()
     },
 
-    pause: function () {
-        lecteur.pause();
+    refresh: () => {
+        setInterval(() => {
+            $('#titre').load('includes/p_titre.php').fadeIn("slow")
+        }, 10000)
     },
 
-    volumePlus: function () {
-        lecteur.volume += 0.2;
+    play: () => {
+        play.click(() => {
+            lecteur.play()
+        })
     },
 
-    volumeMoins: function () {
-        lecteur.volume -= 0.2;
-    }
+    pause: () => {
+        pause.click(() => {
+            lecteur.pause()
+        })
+    },
+
+    volumePlus: () => {
+        plus.click(() => {
+            lecteur.volume += 0.2
+        })
+    },
+
+    volumeMoins: () => {
+        moins.click(() => {
+            lecteur.volume -= 0.2
+        })
+    },
 }
+
+player.init()
+
+

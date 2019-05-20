@@ -1,12 +1,10 @@
-.bg {
+.bgblack {
     background-color: black;
-    width: 22rem;
-    height: 8rem;
 }
 
 .titre {
     width: 18.75rem;
-    height: 3.125;
+    height: 3.125rem;
 }
 
 .center {
