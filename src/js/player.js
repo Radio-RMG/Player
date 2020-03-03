@@ -1,10 +1,10 @@
 console.log('script player.js bien chargé')
 
 let lecteur = $('#lecteur')[0]
-let play    = $('#play')
-let pause    = $('#pause')
-let plus    = $('#plus')
-let moins   = $('#moins')
+let play = $('#play')
+let pause = $('#pause')
+let plus = $('#plus')
+let moins = $('#moins')
 
 let player = {
     init: () => {
