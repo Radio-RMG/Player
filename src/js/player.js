@@ -35,13 +35,17 @@ let player = {
 
     volumePlus: () => {
         plus.click(() => {
-            lecteur.volume += 0.2
+            if (1.0 !== lecteur.volume) {
+                lecteur.volume += 0.1
+            }
         })
     },
 
     volumeMoins: () => {
         moins.click(() => {
-            lecteur.volume -= 0.2
+            if ('0.0' !== lecteur.volume.toFixed(1)) {
+                lecteur.volume -= 0.1
+            }
         })
     },
 }
